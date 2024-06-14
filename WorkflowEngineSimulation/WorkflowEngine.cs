@@ -13,9 +13,15 @@ namespace WorkflowEngineSimulation
 
         public void Run(Workflow workflow)
         {
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine("===============================================================");
+            Console.WriteLine("                       WORKFLOW ENGINE                    ");
+            Console.WriteLine("===============================================================");
+
             foreach (var channel in _workflowChannels)
             {
                 channel.Execute();
+                Console.WriteLine("===============================================================");
             }
         }
 
